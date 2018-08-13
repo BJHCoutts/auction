@@ -40,6 +40,15 @@ end
       price: price,
       user: users.sample
     )
+
+    if a.valid?
+      rand(0..10).times do
+        Bid.create(
+          auction: a,
+          user: users.sample
+        )
+      end
+    end
   end
 
   auctions = Auction.all
