@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :auctions, dependent: :destroy
+  
+  # has_many :bids, dependant: :destroy
+  # has_many :bidded_items, through: :bids, source: :auction
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
   validates(

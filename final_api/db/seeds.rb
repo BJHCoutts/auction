@@ -11,18 +11,37 @@ super_user = User.create(
   admin: true
 )
 
-10.times do 
+10.times do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
 
   User.create(
     first_name: first_name,
     last_name: last_name,
-    email: `#{first_name.downcase}.#{last_name.downcase}@hot.com`,
+    email: "#{first_name.downcase}.#{last_name.downcase}@hot.com",
     password: PASSWORD
   )
-  end
+end
 
   users = User.all
 
   puts Cowsay.say "Created #{users.count} users", :ren
+
+  50.times do
+    title = Faker::Appliance.equipment
+    details = Faker::StarWars.wookiee_sentence
+    end_date = Faker::Date.forward(23)
+    price = Faker::Number.decimal(2,2)
+
+    a = Auction.create(
+      title: title,
+      details: details,
+      end_date: end_date,
+      price: price,
+      # user: users.sample
+    )
+  end
+
+  auctions = Auction.all
+
+  puts Cowsay.say "Created #{auctions.count} auctions", :stimpy
