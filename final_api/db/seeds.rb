@@ -38,7 +38,7 @@ end
       details: details,
       end_date: end_date,
       price: price,
-      # user: users.sample
+      user: users.sample
     )
   end
 

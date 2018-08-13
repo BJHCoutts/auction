@@ -1,4 +1,4 @@
-class Api::V1::AuctionsController < ApplicationController
+class Api::V1::AuctionsController < Api::ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
