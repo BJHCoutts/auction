@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  margin: 0 2rem;
+}
+
+.NavBar {
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.NavBar a {
+  color: goldenrod;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.NavBar span {
+  padding: 1rem;
+}
+
+.NavBar a.active {
+  color: gainsboro;
+  background-color: goldenrod;
+}
+
+.FormErrors {
+  color: red;
+  margin: 0;
+  font-size: 0.8em;
+  padding-left: 1.2rem;
+}
